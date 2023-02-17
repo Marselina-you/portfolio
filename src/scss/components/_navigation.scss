@@ -1,0 +1,44 @@
+.nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+
+  }
+
+  &__item {
+
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 15px 44px;
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline-offset: 2px solid var(--dark-green-color);
+      outline: 1px solid var(--dark-green-color);
+
+    }
+
+    &:hover {
+      color: var(--dark-green-color);
+
+    }
+    &:active {
+
+       color: var(--dark-green-color);
+
+
+    }
+  }
+
+}
+

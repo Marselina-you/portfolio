@@ -1,0 +1,41 @@
+.hero {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    img {
+      width: 410px;
+    }
+  }
+
+  &__name {
+    padding-top: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 30px;
+  }
+  &__name1 {
+    color: var(--dark-red-color);
+    font-weight: 800;
+  }
+  &__name2 {
+    color: var(--dark-light-color);
+  }
+  &__block {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-size: 28px;
+
+    color: var(--dark-color);
+
+
+  }
+  &__work {
+    padding: 0 50px;
+
+  }
+}

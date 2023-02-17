@@ -2,11 +2,26 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+
+  //--font-family: "Roboto", "Rounded", sans-serif;
+  //--font-family-rounded: "Rounded", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
+  --dark-color: rgb(39, 36, 36);
+  --dark-light-color: rgb(76, 76, 79);
+  --dark-blue-color: rgb(75, 75, 70);
+  --gray-blue-color: rgb(179, 191, 208);
+  --blue-color: rgb(120, 142, 171);
+  --light-blue-color: rgb(166, 195, 232);
+  --gray-color: rgb(139, 139, 139);
+  --light-gray-color: rgb(210, 210, 210);
+  --red-color: rgb(213, 33, 40);
+  --dark-red-color: rgb(178, 75, 79);
+  --green-color: rgb(71, 172, 52);
+  --dark-green-color: rgb(42, 120, 50);
+
 }

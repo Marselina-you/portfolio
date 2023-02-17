@@ -1,9 +1,20 @@
 :root {
-  --font-family: "Open Sans", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --light-color: #fff;
+  --dark-color: rgb(39, 36, 36);
+  --dark-light-color: rgb(76, 76, 79);
+  --dark-blue-color: rgb(75, 75, 70);
+  --gray-blue-color: rgb(179, 191, 208);
+  --blue-color: rgb(120, 142, 171);
+  --light-blue-color: rgb(166, 195, 232);
+  --gray-color: rgb(139, 139, 139);
+  --light-gray-color: rgb(210, 210, 210);
+  --red-color: rgb(213, 33, 40);
+  --dark-red-color: rgb(178, 75, 79);
+  --green-color: rgb(71, 172, 52);
+  --dark-green-color: rgb(42, 120, 50);
 }
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
@@ -22,6 +33,34 @@
 }
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable value-keyword-case */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/../fonts/RobotoRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SegoePrint";
+  src: url("../fonts/../fonts/SegoePrint.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/../fonts/Ubuntu-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/../fonts/Ubuntu-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -36,7 +75,7 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: "Ubuntu", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -131,7 +170,111 @@ a {
   position: relative;
 }
 
-.page__body {
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+.header__logo img {
+  width: 165px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__item {
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+.nav__link {
+  display: inline-block;
+  padding: 15px 44px;
+  color: var(--dark-color);
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.nav__link:focus {
+  outline-offset: 2px solid var(--dark-green-color);
+  outline: 1px solid var(--dark-green-color);
+}
+.nav__link:hover {
+  color: var(--dark-green-color);
+}
+.nav__link:active {
+  color: var(--dark-green-color);
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social__item:not(:last-child) {
+  padding-right: 50px;
+}
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.social__link svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--dark-color);
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.social__link:focus {
+  outline-offset: 2px solid var(--dark-green-color);
+  outline: 1px solid var(--dark-green-color);
+}
+.social__link:hover svg {
+  fill: var(--dark-green-color);
+}
+.social__link:active svg {
+  fill: var(--dark-green-color);
+}
+
+.title {
+  margin: 0;
+  font-size: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--dark-color);
+  letter-spacing: 5px;
+}
+.title__hero {
+  padding: 40px 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,6 +284,36 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: var(--vh);
+}
+.hero__logo img {
+  width: 410px;
+}
+.hero__name {
+  padding-top: 60px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 30px;
+}
+.hero__name1 {
+  color: var(--dark-red-color);
+  font-weight: 800;
+}
+.hero__name2 {
+  color: var(--dark-light-color);
+}
+.hero__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 30px;
+  text-transform: capitalize;
+  font-size: 28px;
+  color: var(--dark-color);
+}
+.hero__work {
+  padding: 0 50px;
 }
 /*# sourceMappingURL=main.css.map */

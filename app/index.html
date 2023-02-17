@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Portfolio</title>
+
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -17,14 +18,52 @@
 <body class="page__body">
   <div class="site-container">
     <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <div class="header__block">
+      <a href="" class="logo header__logo" aria-label="Логотип Alf">
+        <img src="img/logo-mini.svg" alt="Logo Alf">
+      </a>
+
+      <nav class="nav" title="Navigation">
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="" class="nav__link">Обо мне</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Работы</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="list-reset social">
+        <li class="social__item"><a href="" class="social__link"><svg>
+          <use xlink:href="img/sprite.svg#telegram"></use>
+        </svg></a></li>
+        <li class="social__item"><a href="" class="social__link"><svg>
+          <use xlink:href="img/sprite.svg#what"></use>
+        </svg></a></li>
+        <li class="social__item"><a href="" class="social__link"><svg>
+          <use xlink:href="img/sprite.svg#vk-2"></use>
+        </svg></a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 
     <main class="main">
-      <picture>
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+      <section class="hero">
+  <div class="container hero__container">
+    <h1 class="title title__hero">веб-разработка</h1>
+    <div class="hero__logo">
+      <img src="img/logo.svg" alt="Logo Alf">
+    </div>
+      <h2 class="hero__name">
+        <span class="hero__name1">алфёрова</span>
+        <span class="hero__name2">марина</span>
+      </h2>
+      <div class="hero__block">
+        <div class="hero__work">frontend</div>
+        <div class="hero__work">backend</div>
+      </div>
+      </div>
+</section>
+
     </main>
     <footer class="footer">
   <div class="container"></div>
