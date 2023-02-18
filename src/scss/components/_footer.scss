@@ -1,0 +1,26 @@
+.footer {
+  margin: 0;
+  padding: 70px 0;
+  border-top: 1px solid var(--blue-color);
+  background-color: var(--light-blue-color);
+
+  &__container {
+
+    @include flex-all-sb;
+  }
+  &__address-block {
+    color: var(--blue-color);
+    font-weight: 400;
+
+  }
+  &__address a{
+    font-weight: 700;
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--dark-red-color);
+    }
+  }
+
+}
