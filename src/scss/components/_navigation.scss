@@ -6,21 +6,27 @@
 
   &__list {
     display: flex;
+    li {
+      &:not(:last-child) {
+        padding-right: 44px;
+      }
+    }
+
 
   }
 
   &__item {
-
     font-size: 24px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   &__link {
     display: inline-block;
-    padding: 15px 44px;
+    font-weight: 500;
     color: var(--dark-color);
     transition: color 0.3s ease-in-out;
+
+
 
     &:focus {
       outline-offset: 2px solid var(--dark-green-color);

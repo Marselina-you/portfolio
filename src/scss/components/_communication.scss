@@ -1,0 +1,57 @@
+.communication {
+  padding: 150px 0;
+
+  &__git {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--dark-color);
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 150%;
+  }
+  &__link {
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 150%;
+    transition: color 0.3s ease-in-out;
+
+
+    &:hover {
+      color: var(--red-color);
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.telegram-link {
+  color: var(--dark-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+
+
+  &__span {
+    color: var(--red-color);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--dark-red-color);
+    }
+  }
+}

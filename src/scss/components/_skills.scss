@@ -1,0 +1,88 @@
+.skills {
+  background-color: inherit;
+  padding-top: 100px;
+
+  &__list {
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin: 0 auto;
+    gap: 20px;
+
+  }
+}
+.skills-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__circle {
+    --progress-stroke: #000;
+    --progress-bg-opacity: 0.3;
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    svg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+    }
+    .progress {
+      stroke: var(--progress-stroke);
+      transform: rotate(-90deg) translateX(20px);
+      transform-origin: center;
+    }
+    .progress-bg {
+      stroke: var(--progress-stroke);
+      opacity: var(--progress-bg-opacity);
+
+    }
+    &--one-color {
+      --progress-stroke: #E44D26;
+    }
+    &--two-color {
+      --progress-stroke: #1572b6;
+    }
+    &--three-color {
+      --progress-stroke: var(--dark-color);
+    }
+    &--four-color {
+      --progress-stroke: #0868AC;
+    }
+    &--five-color {
+      --progress-stroke: var(--dark-color);
+    }
+    &--six-color {
+      --progress-stroke: #00759D;
+    }
+    &--seven-color {
+      --progress-stroke: #0073BB;
+    }
+    &--eight-color {
+      --progress-stroke: #e48e00ff;
+    }
+    &--nine-color {
+      --progress-stroke: #FFE634;
+    }
+  }
+  &__value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--dark-light-color);
+    transform: translate(-50%, -50%);
+  }
+  &__icon {
+    padding-bottom: 20px;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

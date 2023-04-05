@@ -83,6 +83,11 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: 100%;
+}
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;

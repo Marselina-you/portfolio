@@ -5,9 +5,13 @@
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log('components');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/progress.js */ "./src/js/components/progress.js");
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_progress_js__WEBPACK_IMPORTED_MODULE_0__);
+
 
 /***/ }),
 
@@ -140,6 +144,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/components/progress.js":
+/*!***************************************!*\
+  !*** ./src/js/components/progress.js ***!
+  \***************************************/
+/***/ (() => {
+
+const circles = document.querySelectorAll('.skills-element__circle');
+circles.forEach(el => {
+  if (el.dataset.percentage == 'true') {
+    console.log('circles');
+  } else {
+    let progress = el.querySelector('.progress');
+    let valueBlock = el.querySelector('.skills-element__value');
+    let radius = progress.getAttribute('r');
+    let circleLength = 2 * Math.PI * radius;
+    let percent = el.dataset.percent;
+    let percentageProgress = Math.floor(percent);
+    valueBlock.textContent = percent + '%';
+    progress.setAttribute('stroke-dasharray', circleLength);
+    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
+  }
+});
 
 /***/ }),
 
@@ -539,7 +568,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
