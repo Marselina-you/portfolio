@@ -1,4 +1,13 @@
 .example {
+
+  &__left {
+    img {
+      @include small-tablet {
+        width: 50px;
+        height: auto;
+      }
+    }
+  }
   color: var(--dark-color);
   &__title {
     margin: 0;
@@ -6,6 +15,10 @@
     font-size: 64px;
     text-transform: capitalize;
     line-height: 150%;
+
+    @include small-tablet {
+      font-size: 48px;
+    }
 
   }
   &__list {
@@ -16,7 +29,11 @@
     margin: 0;
     line-height: 150%;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
+
+    @include small-tablet {
+      font-size: 24px;
+    }
 
   }
   &__link {
@@ -26,6 +43,11 @@ line-height: 150%;
 letter-spacing: 5px;
 color: var(--red-color);
 transition: color 0.3s ease-in-out;
+
+@include small-tablet {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
 
 &:hover {
   color: var(--dark-red-color);
@@ -41,6 +63,14 @@ font-size: 24px;
 border-bottom: 1px solid var(--dark-color);
 padding-top: 30px;
 padding-bottom: 30px;
+
+@include small-tablet {
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
 a {
   cursor: pointer;
 }
@@ -48,12 +78,28 @@ a {
   }
   &__image {
     padding: 50px 0;
+
+    @include small-tablet {
+      padding: 20px 0;
+    }
   }
 }
 
 .example-item {
   padding: 40px 0;
+
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__title {
+    position: relative;
+    padding-left: 70px;
+    font-size: 32px;
+    line-height: 150%;
+
+    @include small-tablet {
+      font-size: 24px;
+    }
     &::before {
       counter-increment: select;
       content: counter(select);
@@ -69,26 +115,23 @@ a {
       width: 34px;
       height: 34px;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 40px;
       color: var(--light-color);
       background-color: var(--red-color);
 
       }
     }
-  &__title {
-    position: relative;
-    padding-left: 70px;
-    font-size: 32px;
-    line-height: 150%;
 
-
-  }
   &__descr {
     padding-left: 70px;
     font-size: 24px;
     font-weight: 300;
     line-height: 200%;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
   }
 }
 .example-block {
@@ -102,6 +145,10 @@ a {
 font-size: 32px;
 line-height: 144px;
 color: var(--gray-color);
+
+@include small-tablet {
+  font-size:  24px;
+}
 }
 }
 

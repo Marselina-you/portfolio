@@ -1,13 +1,23 @@
 .hero-about {
   background-color: inherit;
 
+
   &__img {
     width: 70%;
     height: auto;
+    @include small-tablet {
+      width: 50%;
+      height: auto;
+    }
+
   }
   &__container {
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+    }
 
   }
   &__txt {
@@ -18,16 +28,28 @@
     //margin: 0;
 
     font-size: 36px;
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   &__subtitle {
     font-weight: 500;
     font-size: 32px;
     color: var(--dark-light-color);
+
+    @include small-tablet {
+      font-size: 28px;
+    }
   }
   &__descr {
     line-height: 170%;
     font-weight: 300;
     font-size: 24px;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
   }
 }

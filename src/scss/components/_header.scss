@@ -4,10 +4,18 @@
     display: flex;
     justify-content: space-between;
     padding: 35px 0;
+
+    @include small-tablet {
+      padding: 20px 0;
+    }
   }
   &__logo {
     img {
       width: 165px;
+
+      @include mobile {
+        width: 100px;
+      }
     }
 
   }
